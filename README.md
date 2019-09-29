@@ -5,14 +5,17 @@ react 所有方式的路由
 所有的路由都必须包含在`Router`里
 
 1. router1:使用`Link`和`Route`的组合
+
    无注意事项
 
 2. `Route`和`Switch`区别
+   
    `Route`会渲染所有的路由
 
 `Switch`会去对比所有的`Route`,只有遇到匹配上的路由才会渲染，之后就停止匹配了
 
 3. router2:使用`Switch`去包含`Route`
+
    `Switch`会渲染第一个匹配上的路由
 
 解决方法：
@@ -43,6 +46,7 @@ react 所有方式的路由
 ```
 
 4. `router config`将所有的路由提取出来（常用的方法）
+
    `config.js`
    ```
    export const routes=[{ path:'/', component:home },{ path:'/about', component:about },{ path:'/user', component:user }]
