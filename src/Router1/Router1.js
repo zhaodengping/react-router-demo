@@ -9,6 +9,7 @@ class Router1 extends React.Component{
   render(){
     return(
       <Router>
+          <div>router1</div>
           <div className="width">
               <div><Link to='/'>Home</Link></div>
               <div><NavLink to='/about'>About</NavLink></div>
@@ -24,7 +25,6 @@ class Router1 extends React.Component{
             <Route path='/about'>
               <About/>
             </Route>
-            
           </Switch>
       </Router>
     )

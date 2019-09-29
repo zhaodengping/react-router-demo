@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.route2{
+    margin-left: 200px;
+}
+
 .width{
+    margin-left: 200px;
     width: 200px;
 }
