@@ -44,9 +44,13 @@ react 所有方式的路由
 
 4. `router config`将所有的路由提取出来（常用的方法）
    `config.js`
-   `export const routes=[{ path:'/', component:home },{ path:'/about', component:about },{ path:'/user', component:user }]`
+   ```
+   export const routes=[{ path:'/', component:home },{ path:'/about', component:about },{ path:'/user', component:user }]
+   ```
    正文部分：
-   `let route=routes.map((item,index)=>{ return <Route exact path={item.path} component={item.component} key={index}></Route> })`
+   ```
+   let route=routes.map((item,index)=>{ return <Route exact path={item.path} component={item.component} key={index}></Route> })
+   ```
 
 - `react`路由针对浏览器，提供了 2 种方式，`<BrowserRouter>`and `<HashRouter>`
 
