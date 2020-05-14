@@ -76,6 +76,65 @@ react 所有方式的路由
 
 - `Scroll To Top`：当文章篇幅很长，我们将浏览器的滚动条拉到最下边，然后进行路由切换，进入新页面，浏览器还是会展示之前页面的位置，不雅观
 
+    ```
+    window.scrollT(0,0)
+    ```
+
 - `router-redux`
 
+5. 传递参数(方式1:/:valueId)
+
+    传递：
+    ```
+         <Router>
+            <Link to='/topic/1'>topic1</Link>
+            <Link to='/topic/2'>topic2</Link>
+            <Route path='/topic/:topicId'>
+                <TopicDetail/>
+            </Route>
+        </Router>
+    ```
+    接收:
+    ```
+    let {topicId}=useRouteMatch().params
+    或者：
+    let {topicId}=useParams()
+    ```
+6. hook
+
+    1. useHistory 可以直接在js中操作即将跳转的路由
+    2. useLocation 返回location对象的所有参数
+    3. useParams 返回路由所带的参数key/value对象
+    4. browserRouter HTML5的API
+        - 其中baseName表示它的下一级路由自动加上baseName 
+
+    ```
+    <BrowserRouter basename="/calendar" />
+    <Link to="/today"/> // renders <a href="/calendar/today">
+    ```
+
+    5. hashRouter 跟browserRouter差不多，就是路由前会自动加上#
+
+    ```
+    <HashRouter basename="/calendar"/>
+    <Link to="/today"/> // renders <a href="#/calendar/today">
+    ```
+    6. Link to参数可以是string/object/function，replace会退回到相应的路由上，不是push一个新页面
+    7. navLink 跟link差不多，但是会有个原生的样式改变，会自动加上className的属性
+    8. exact 表示是不是需要精确匹配(true/false)
+    9. strict 表示末尾的斜杠是否需要匹配(true/false),
+
+    true:
+    ```
+    path:
+    /one/
+    location.pathname:
+    /one
+    /匹配失败
+    ```
+    10. redirect 重定向
+
 若有其他相关路由信息，欢迎补充～
+
+
+

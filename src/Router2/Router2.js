@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import {routes} from './routers' 
 
 //router第四种方式
-class Router1 extends React.Component{
+class Router2 extends React.Component{
     
   render(){
     let route=routes.map((item,index)=>{
@@ -23,4 +23,4 @@ class Router1 extends React.Component{
   }
 }
 
-export default Router1
+export default Router2
